@@ -35,50 +35,50 @@
 
 
 
-// import java.util.*;
-// public class array_1{
-//     public static void main(String[] args) {
-//         Scanner sc = new Scanner(System.in);
-//         System.out.print("Enter size of Array: ");
-//         int size = sc.nextInt();
-//         int numbers[] = new int[size];
+import java.util.*;
+public class array_1{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of Array: ");
+        int size = sc.nextInt();
+        int numbers[] = new int[size];
 
-//         //input
-//         for(int i = 0; i<size; i++){
-//             numbers[i] = sc.nextInt();
-//         }
+        //input
+        for(int i = 0; i<size; i++){
+            numbers[i] = sc.nextInt();
+        }
 
-//         //output
-//         for(int i= 0; i<size; i++){
-//             System.out.println(numbers[i]);
-//         }
-//     }
-// }
+        //output
+        for(int i= 0; i<size; i++){
+            System.out.println(numbers[i]);
+        }
+    }
+}
 
 
 
 /*Q) Take an array as input from the user. Search for a given number x and print the index at which it occurs. */
-// import java.util.Scanner;
-// public class array_1{
-//     public static void main(String[] args) {
-//         Scanner sc = new Scanner(System.in);
-//         System.out.print("Enter Size Of Array: ");
-//         int size = sc.nextInt();
-//         int numbers[] = new int[size]; //define(def) array
-//         //input 
-//         for (int i = 0; i< size; i++){
-//             numbers[i] = sc.nextInt();
-//         }
-//         System.out.print("Enter one Element value To find: ");
-//         int x = sc.nextInt();
-//         //output
-//         for(int i = 0; i<numbers.length;i++){  // OR for(int i = 0; i<size; i++){
-//             if(numbers[i]==x){
-//                 System.out.println("x found at index: "+i);
-//             }
-//         }
-//     }
-// }
+import java.util.Scanner;
+public class array_1{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Size Of Array: ");
+        int size = sc.nextInt();
+        int numbers[] = new int[size]; //define(def) array
+        //input 
+        for (int i = 0; i< size; i++){
+            numbers[i] = sc.nextInt();
+        }
+        System.out.print("Enter one Element value To find: ");
+        int x = sc.nextInt();
+        //output
+        for(int i = 0; i<numbers.length;i++){  // OR for(int i = 0; i<size; i++){
+            if(numbers[i]==x){
+                System.out.println("x found at index: "+i);
+            }
+        }
+    }
+}
 
 
 
@@ -88,20 +88,32 @@ Take an array of names as input from the user and print them on the screen.
  */
 
 
- public class array_1{
-    public static void main(String[] args) {
+import java.util.*;
+public class array_1{
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        Array n = new Array[n];
+        System.out.print("Enter the number of names: ");
+        int numName = sc.nextInt();
+        System.out.println();
 
-        //input
-        for(int i = 0; i<n;i++){
-            n[i] = sc.nextInt();     //pending
-        }
+        String[] names = new String[numName];
 
-        //output
-        for(int i = 0; i<n.length;i++){
-            System.out.println();
+        sc.nextLine();
+        for(int i = 0; i< numName; i++){
+            System.out.print("Enter name "+(i + 1)+": ");
+            names[i] = sc.nextLine();
         }
+        System.out.println();
+
+        System.out.println("Name Entered:");
+        for(String name : names){
+            System.out.println(name);
+        }
+        /* or we also able to use this to replace it
+           for (int i = 0; i < names.length; i++) {
+    String name = names[i];
+    // Code to execute for each name
+}
+         */
     }
- }
+}
