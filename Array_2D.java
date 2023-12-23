@@ -32,36 +32,38 @@
 
 /*Q) Take a matrix as input from the user. Search for a given number x and print the indices at which it occurs. */
 
-// import java.util.Scanner;
-// public class Array_2D{
-//     public static void main(String[] args) {
-//         Scanner sc = new Scanner(System.in);
-//         System.out.print("Enter row value: ");
-//         int row = sc.nextInt();
-//         System.out.print("Enter column value: ");
-//         int col = sc.nextInt();
+import java.util.*;
+public class variable_data_type{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of col: ");
+        int col = sc.nextInt();
+        System.out.print("Enter size of row: ");
+        int row = sc.nextInt();
 
-//         int[][] numbers = new int[row][col];
+        int arr[][] = new int[col][row];
 
-//         //input
-//         //row control
-//         for(int i = 0; i< row; i++)
-//         {
-//             //column
-//             for(int j = 0; j<col; j++){
-//                 numbers[i][j] = sc.nextInt();
-//             }
-//         }
-//         System.out.print("Enter Element you want to found:");
-//         int x = sc.nextInt();
+        for(int i = 0; i<col; i++){
+            for(int j = 0; j<row; j++){
+                System.out.print("Enter value of ["+i+"] ["+j+"] : ");
+                arr[i][j] = sc.nextInt();
+            }
+            System.out.println();
+        }
 
-//         for(int i = 0; i<row; i++){
-//             for(int j = 0; j<col; j++){
-//                 if(numbers[i][j]==x){
-//                     System.out.println("x found at location ("+i+","+j+")");
-//                 }
-//             }
-//         }
+        System.out.println("Enter value to find: ");
+        int x = sc.nextInt();
+
+        for(int i = 0; i<col; i++){
+            for(int j = 0; j<row; j++){
+                if(arr[i][j] == x){
+                    System.out.print(x+" is found at matrix ["+i+"] ["+j+"] ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
 
 //     //     //output
 //     //     for(int i = 0; i<row; i++){
